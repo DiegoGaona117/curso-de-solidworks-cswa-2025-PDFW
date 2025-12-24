@@ -79,6 +79,18 @@ if (user) {
     // document.getElementById('userName').textContent = user.name;
 }
 </script>
+
+    <button onclick="cerrarSesion()" style="position: fixed; top: 20px; right: 20px; padding: 10px 20px; background: #dc3545; color: white; border: none; border-radius: 5px; cursor: pointer;">
+    Cerrar Sesión
+</button>
+
+<script>
+function cerrarSesion() {
+    sessionStorage.removeItem('currentUser');
+    alert('Sesión cerrada');
+    window.location.href = 'login.html'; // URL de tu login
+}
+</script>
     
     <!-- Hero Section -->
     <section class="hero" id="main-content">
