@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso SolidWorks: De Cero a Certificación CSWA | Diego Gaona</title>
@@ -60,6 +61,24 @@
     
 </head>
 <body>
+
+    <!-- Agrega esto al inicio de tu página de ejercicios, justo después de <body> -->
+<script>
+// Verificar si el usuario ha iniciado sesión
+if (!sessionStorage.getItem('currentUser')) {
+    // Si no hay sesión, redirigir al login
+    alert('Debes iniciar sesión para acceder a este contenido');
+    window.location.href = 'login.html'; // Cambia esto por la URL de tu login
+}
+
+// Opcional: Mostrar nombre del usuario
+const user = JSON.parse(sessionStorage.getItem('currentUser'));
+if (user) {
+    console.log('Usuario autenticado:', user.name);
+    // Puedes mostrar el nombre en alguna parte de tu página:
+    // document.getElementById('userName').textContent = user.name;
+}
+</script>
     
     <!-- Hero Section -->
     <section class="hero" id="main-content">
